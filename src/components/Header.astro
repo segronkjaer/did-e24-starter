@@ -1,30 +1,30 @@
 ---
 ---
 <!-- MENU - DESKTOP VERSION -->
-<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-slate-200" >
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full" >
     <div id="navbar" class="flex flex-row justify-between">
     <div id="logo" class="">
     <a href="#link1">Site logo</a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
     <ul class="flex flex-row gap-4">
-    <li class=""><a href="">Københavnerbilleder</a></li>
-    <li class=""><a href="">Bogens indhold</a></li>
-    <li class=""><a href="">Forfatteren</a></li>
-    <li class=""><a href="">Køb nu</a></li>
+    <li class=""><a href="#kapitler">Bogens kapitler</a></li>
+    <li class=""><a href="#anmeldelser">Anmeldelser</a></li>
+    <li class=""><a href="#forfatter">Om forfatteren</a></li>
+    <li class=""><a href="#bestil">Bestil nu</a></li>
     </ul>
     </nav>
 
 <!-- MENU - MOBIL VERSION -->
     <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
     </div>
-    <nav id="mobilmenu" class="flex flex-col content-center pt-4" 
+    <nav id="mobilmenu" class="flex flex-col content-center pt-4 bg-white" 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul >
-    <li class="text-center py-2 border-y-2"><a href="">Københavnerbilleder</a></li>
-    <li class="text-center py-2 border-b-2"><a href="">Bogens indhold</a></li>
-    <li class="text-center py-2 border-b-2"><a href="">Forfatteren</a></li>
-    <li class="text-center py-2 border-b-2"><a href="">Køb nu</a></li>
+    <li class="text-center py-2 border-y-2"><a href="#kapitler">Bogens kapitler</a></li>
+    <li class="text-center py-2 border-b-2"><a href="#anmeldelser">Anmeldelser</a></li>
+    <li class="text-center py-2 border-b-2"><a href="#forfatter">Om forfatteren</a></li>
+    <li class="text-center py-2 border-b-2"><a href="#bestil">Bestil nu</a></li>
     </ul>
     </nav>
     </div>

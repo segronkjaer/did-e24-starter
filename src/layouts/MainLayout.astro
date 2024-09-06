@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
 import '../styles/tailwind.css';
 import 'animate.css';
 const { title } = Astro.props;
@@ -20,20 +21,21 @@ const { title } = Astro.props;
 			<Header></Header>
 		</header>
 		
-		<main>
-			<section class="grid md:grid-cols-2"><!--sætter media queries på hvor breakpoint er en medium skærm -->
+		<main class="p-12">
+			<section class="pb-8 grid md:grid-cols-2 gap-6"><!--sætter media queries på hvor breakpoint er en medium skærm -->
 				<div>
 					<img src="/src/assets/images/1.webp" alt="">
 				<!--<img src="../assets/images/kobenhavnerbilleder-sten-simons.jpg" alt="">-->
 				</div>
 				<div>
-					<h1 class="text-3xl">Københavnerbilleder - en guide til hipster foto</h1>
-					<p>af Sten Simons</p>
-					<button>Finde tekst til knap</button>
+					<h1 class="pb-4 text-4xl text-blue-900 font-bold">Københavnerbilleder - en guide til hipster foto</h1>
+					<p class="pb-4">Københavnerbilleder af Sten Simons er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+					<Button variant="primary" size="medium">Bestil bogen nu</Button>
 				</div>
 			</section>
-			<section class="grid md:grid-cols-2">
+			<section class="pb-8">
 				<div>
+					<h2 class="font-bold">Fakta om bogen</h2>
 					<p>Titel: Københavnerbilleder - en guide til hipster foto</p>
 					<p>Forfatter: Sten Simons</p>
 					<p>Antal sider: 344</p>
@@ -41,18 +43,15 @@ const { title } = Astro.props;
 					<p>ISBN: 987-6-987654-32-1</p>
 					<p>Pris: 399.-</p>
 				</div>
-				<div>
-					<p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
-				</div>
 			</section>
-			<section class="grid md:grid-cols-3">
-				<img src="/src/assets/images/1.webp" alt="">
-				<img src="/src/assets/images/11.webp" alt="">
-				<img src="/src/assets/images/12.webp" alt="">
+			<section class="pb-12 grid md:grid-cols-3 mx-auto gap-4 items-center elemtmedanimation1">
+				<img class="my-class transition-all hover:scale-125" src="/src/assets/images/1.webp" alt="">
+				<img class="my-class transition-all hover:scale-125" src="/src/assets/images/11.webp" alt="">
+				<img class="my-class transition-all hover:scale-125" src="/src/assets/images/12.webp" alt="">
 			</section>
-			<section>
-				<h1 class="text-2xl">Kapitlerne</h1>
-				<div class="grid md:grid-cols-2">
+			<section id="kapitler" class="pb-12">
+				<h1 class="pb-6 pt-16 font-bold text-3xl text-blue-900">Kapitlerne</h1>
+				<div class="grid md:grid-cols-2 gap-6">
 					<div>
 						<h2 class="font-bold">Kapitel 1 - Intro til street foto</h2>
 						<p>Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.</p>
@@ -86,63 +85,65 @@ const { title } = Astro.props;
 						<p>Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
 					</div>
 				</div>
+				<div class="pt-6 pb-8 flex items-center justify-center">
+				<Button variant="primary" size="medium">Download et prøvekapitel her</Button>
+			</div>
 			</section>
-			<section>
-				<h1 class="text-2xl">Anmeldelser</h1>
-				<div class="grid md:grid-cols-3">
+			<section id="anmeldelser" class="pb-12 elementmedanimation2">
+				<h1 class="pb-4 font-bold text-3xl text-blue-900">Anmeldelser</h1>
+				<div class="grid md:grid-cols-3 gap-6">
 					<div>
-						<img src="/src/assets/images/stjerner1.png">
-						<h2 class="font-bold">5 af 6 stjerner</h2>
-						<p>Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
+						<img class="transition-all hover:scale-125" src="/src/assets/images/star1.svg">
+						<h2 class="pt-4 font-bold">5 af 6 stjerner</h2>
+						<p class="pt-2">Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
 						<p>- Hanne Hovgaard, Berlingeren</p>
 					</div>
 					<div>
-						<img src="/src/assets/images/stjerner2.png" alt="">
-						<h2 class="font-bold">4 af 5 stjerner</h2>
-						<p>Teksten er underholdende, og billederne er sku flotte. Hvad mere skal man sige om en fotobog?</p>
+						<img class="transition-all hover:scale-125" src="/src/assets/images/star2.svg" alt="">
+						<h2 class="pt-4 font-bold">4 af 5 stjerner</h2>
+						<p class="pt-2">Teksten er underholdende, og billederne er sku flotte. Hvad mere skal man sige om en fotobog?</p>
 						<p>- Kim Kloggaard, Fotojournalen.dk</p>
 					</div>
 					<div>
-						<img src="/src/assets/images/star3.svg" alt="">
-						<h2 class="font-bold">6 af 6 stjerner</h2>
-						<p>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
+						<img class="transition-all hover:scale-125" src="/src/assets/images/star3.svg" alt="">
+						<h2 class="pt-4 font-bold">6 af 6 stjerner</h2>
+						<p class="pt-2">Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
 						<p>- Volmer Hansen, Lukkertiden.dk </p>
 					</div>
 				</div>
 			</section>
-			<section>
-				<h1 class="text-2xl">Billeder fra bogen</h1>
-				<div class="grid md:grid-cols-4">
-					<img src="/src/assets/images/3.webp" alt="">
-					<img src="/src/assets/images/2.webp" alt="">
-					<img src="/src/assets/images/4.webp" alt="">
-					<img src="/src/assets/images/6.webp" alt="">
-					<img src="/src/assets/images/7.webp" alt="">
-					<img src="/src/assets/images/5.webp" alt="">
-					<img src="/src/assets/images/8.webp" alt="">
-					<img src="/src/assets/images/10.webp" alt="">
+			<section class="pb-12 elemtmedanimation3">
+				<h1 class="pb-4 pt-16 font-bold text-3xl text-blue-900">Billeder fra bogen</h1>
+				<div class="grid md:grid-cols-4 gap-4 place-items-stretch">
+					<img class="transition-all hover:scale-125" src="/src/assets/images/3.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/src/assets/images/2.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/src/assets/images/4.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/src/assets/images/6.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/src/assets/images/7.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/src/assets/images/5.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/src/assets/images/8.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/src/assets/images/10.webp" alt="">
 				</div>
 			</section>
-			<section>
-				<h1 class="text-2xl">Forfatteren</h1>
-				<!--<img src="../assets/images/sten_simons.jpg" alt="">-->
-				<div class="grid md:grid-cols-2">
-				<img src="/src/assets/images/9.webp" alt="">
-				<p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+			<section id="forfatter" class="pb-16 pt-16">
+				<h1 class="pb-4 font-bold text-3xl text-blue-900">Forfatteren</h1>
+				<div class="grid md:grid-cols-3 gap-8">
+				<img class="md:col-start-1 col-span-1" src="/src/assets/images/9.webp" alt="">
+				<p class="md:col-start-2 col-span-1">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
 					Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p></div>
 			</section>
-				<h1 class="text-2xl">Køb Københavnerbilleder her</h1>
+				<h1 id="bestil" class="font-bold text-3xl text-blue-900 md:px-80">Køb Københavnerbilleder her</h1>
 
 				<form action="mt-8 max-w-md">
 
-					<div class="p-6 max-w-3xl mx-auto">
+					<div class="px-8 py-4 max-w-3xl mx-auto">
 						<label class="" for="antal">Antal:</label>
 						
 						<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="number" id="antal" placeholder="1">
 						<!-- <input class="mt-1 block focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="number" id="antal" placeholder="1"> -->
 					</div>
 			
-					<div class="p-6 max-w-3xl mx-auto">
+					<div class="px-8 py-4 max-w-3xl mx-auto">
 						<span class="text-gray-700">Levering:</span>
 						<input class="rounded-md  border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="radio" id="postnord" name="levering" checked="checked">
 						<label for="postnord">Postnord</label>
@@ -150,38 +151,39 @@ const { title } = Astro.props;
 						<label for="afhent">Afhent selv</label>
 					</div>
 			
-				  <div class="p-6 max-w-3xl mx-auto text-gray-700">
+				  <div class="px-8 py-4 max-w-3xl mx-auto text-gray-700">
 						<label class="text-gray-700" for="navn">Navn:</label>
 						<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="navn" placeholder="Navn">
 					</div>
 			
-					<div class="p-6 max-w-3xl mx-auto">
+					<div class="px-8 py-4 max-w-3xl mx-auto">
 						<label class="" for="adresse">Adresse:</label>
 						<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="adresse" placeholder="Adresse">
 					</div>
 			
-					<div class="p-6 max-w-3xl mx-auto">
+					<div class="px-8 py-4 max-w-3xl mx-auto">
 						<label for="e-mail">E-mail:</label>
 						<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="email" id="e-mail" placeholder="E-mail">
 					</div>
 			
-					<div class="p-6 max-w-3xl mx-auto">
+					<div class="px-8 py-4 max-w-3xl mx-auto">
 						<label for="postnummer og by">Postnummer & By:</label>
 						<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="postnummer" placeholder="Postnummer">
 						<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="by" placeholder="By">
 					</div>
 			
-					<div class="block p-6 max-w-3xl mx-auto">
+					<div class="block px-8 py-4 max-w-3xl mx-auto">
 						<label class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" for="telefon">Telefon:</label>
 						<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="tel" id="telefon" placeholder="Telefon">
 					</div>
 			
-					<div class=" block p-6 max-w-3xl mx-auto">
+					<div class=" block px-8 py-4 max-w-3xl mx-auto">
 						<input class="rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="checkbox" id="postnord" name="Levering" checked="checked">
 						<label for="postnord"> Ja tak til nyheder og tilbud </label>
 					</div>
 				</form>
-				<button>Forsæt til betaling</button>
+				<div class="md:px-80">
+				<Button variant="primary" size="medium">Forsæt til betaling</Button></div>
 			<slot />
 		</main>
 
@@ -191,3 +193,36 @@ const { title } = Astro.props;
 			
 	</body>
 </html>
+<script>
+
+import { inView } from "motion";
+
+ 
+
+const elementmedanimation1 = document.querySelector(".elementmedanimation1");
+
+inView(elementmedanimation1, () => {
+
+elementmedanimation1.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+
+}); 
+
+ 
+
+const elementmedanimation2 = document.querySelector(".elementmedanimation2");
+
+inView(elementmedanimation2, () => {
+
+elementmedanimation2.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+
+}); 
+
+const elementmedanimation3 = document.querySelector(".elementmedanimation3");
+
+inView(elementmedanimation3, () => {
+
+elementmedanimation3.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+
+}); 
+
+	
