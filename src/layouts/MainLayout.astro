@@ -24,8 +24,7 @@ const { title } = Astro.props;
 		<main class="p-12">
 			<section class="pb-8 grid md:grid-cols-2 gap-6"><!--sætter media queries på hvor breakpoint er en medium skærm -->
 				<div>
-					<img src="/src/assets/images/1.webp" alt="">
-				<!--<img src="../assets/images/kobenhavnerbilleder-sten-simons.jpg" alt="">-->
+					<img src="/public/1.webp" alt="">
 				</div>
 				<div>
 					<h1 class="pb-4 text-4xl text-blue-900 font-bold">Københavnerbilleder - en guide til hipster foto</h1>
@@ -45,9 +44,9 @@ const { title } = Astro.props;
 				</div>
 			</section>
 			<section class="pb-12 grid md:grid-cols-3 mx-auto gap-4 items-center elemtmedanimation1">
-				<img class="my-class transition-all hover:scale-125" src="/src/assets/images/1.webp" alt="">
-				<img class="my-class transition-all hover:scale-125" src="/src/assets/images/11.webp" alt="">
-				<img class="my-class transition-all hover:scale-125" src="/src/assets/images/12.webp" alt="">
+				<img class="my-class transition-all hover:scale-125" src="/public/1.webp" alt="">
+				<img class="my-class transition-all hover:scale-125" src="/public/11.webp" alt="">
+				<img class="my-class transition-all hover:scale-125" src="/public/12.webp" alt="">
 			</section>
 			<section id="kapitler" class="pb-12">
 				<h1 class="pb-6 pt-16 font-bold text-3xl text-blue-900">Kapitlerne</h1>
@@ -93,19 +92,19 @@ const { title } = Astro.props;
 				<h1 class="pb-4 font-bold text-3xl text-blue-900">Anmeldelser</h1>
 				<div class="grid md:grid-cols-3 gap-6">
 					<div>
-						<img class="transition-all hover:scale-125" src="/src/assets/images/star1.svg">
+						<img class="transition-all hover:scale-125" src="/public/star1.svg">
 						<h2 class="pt-4 font-bold">5 af 6 stjerner</h2>
 						<p class="pt-2">Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
 						<p>- Hanne Hovgaard, Berlingeren</p>
 					</div>
 					<div>
-						<img class="transition-all hover:scale-125" src="/src/assets/images/star2.svg" alt="">
+						<img class="transition-all hover:scale-125" src="/public/star2.svg" alt="">
 						<h2 class="pt-4 font-bold">4 af 5 stjerner</h2>
 						<p class="pt-2">Teksten er underholdende, og billederne er sku flotte. Hvad mere skal man sige om en fotobog?</p>
 						<p>- Kim Kloggaard, Fotojournalen.dk</p>
 					</div>
 					<div>
-						<img class="transition-all hover:scale-125" src="/src/assets/images/star3.svg" alt="">
+						<img class="transition-all hover:scale-125" src="/public/star3.svg" alt="">
 						<h2 class="pt-4 font-bold">6 af 6 stjerner</h2>
 						<p class="pt-2">Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
 						<p>- Volmer Hansen, Lukkertiden.dk </p>
@@ -115,20 +114,20 @@ const { title } = Astro.props;
 			<section class="pb-12 elemtmedanimation3">
 				<h1 class="pb-4 pt-16 font-bold text-3xl text-blue-900">Billeder fra bogen</h1>
 				<div class="grid md:grid-cols-4 gap-4 place-items-stretch">
-					<img class="transition-all hover:scale-125" src="/src/assets/images/3.webp" alt="">
-					<img class="transition-all hover:scale-125" src="/src/assets/images/2.webp" alt="">
-					<img class="transition-all hover:scale-125" src="/src/assets/images/4.webp" alt="">
-					<img class="transition-all hover:scale-125" src="/src/assets/images/6.webp" alt="">
-					<img class="transition-all hover:scale-125" src="/src/assets/images/7.webp" alt="">
-					<img class="transition-all hover:scale-125" src="/src/assets/images/5.webp" alt="">
-					<img class="transition-all hover:scale-125" src="/src/assets/images/8.webp" alt="">
-					<img class="transition-all hover:scale-125" src="/src/assets/images/10.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/public/3.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/public/2.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/public/4.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/public/6.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/public/7.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/public/5.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/public/8.webp" alt="">
+					<img class="transition-all hover:scale-125" src="/public/10.webp" alt="">
 				</div>
 			</section>
 			<section id="forfatter" class="pb-16 pt-16">
 				<h1 class="pb-4 font-bold text-3xl text-blue-900">Forfatteren</h1>
 				<div class="grid md:grid-cols-3 gap-8">
-				<img class="md:col-start-1 col-span-1" src="/src/assets/images/9.webp" alt="">
+				<img class="md:col-start-1 col-span-1" src="/public/9.webp" alt="">
 				<p class="md:col-start-2 col-span-1">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
 					Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p></div>
 			</section>
